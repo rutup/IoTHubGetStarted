@@ -11,13 +11,14 @@ namespace CreateDeviceIdentity
     class Program
     {
         static RegistryManager registryManager;
-        static string connectionString = "{iot hub connection string}";
+        static string connectionString = "HostName=Rutu-HomeTest.azure-devices.net;SharedAccessKeyName=service;SharedAccessKey=5KvC/EAk7CSKfv30k2vktCmF66efTgo34ZYvjm1b6Mc=";
 
         static void Main(string[] args)
         {
             registryManager = RegistryManager.CreateFromConnectionString(connectionString);
             AddDeviceAsync().Wait();
             Console.ReadLine();
+            //qdfoWBHqGLVY3PtMgWg6TOIgQxy0KzyI3hUD/Cb+oWE=
         }
 
         private static async Task AddDeviceAsync()
